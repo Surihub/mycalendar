@@ -2,8 +2,15 @@ import streamlit as st
 import pandas as pd
 import datetime
 
+st.set_page_config(
+    page_title="mycalender",  # 페이지 제목
+    page_icon="📆",                    # 페이지 아이콘
+    layout="centered",                 # 레이아웃: centered or wide
+    initial_sidebar_state="auto",      # 사이드바 상태: auto, expanded, collapsed
+)
+
 # 제목
-st.title("📆학사일정 내 캘린더로 불러오기")
+st.title("📆데이터를 캘린더로 연동하기")
 st.info("CSV 파일을 iCalendar(ICS) 파일로 변환하고, Google Calendar에 추가할 수 있습니다. 먼저 학사일정 데이터는 [나이스 데이터 포털](https://open.neis.go.kr/portal/data/service/selectServicePage.do?page=1&rows=10&sortColumn=&sortDirection=&infId=OPEN17220190722175038389180&infSeq=1)에서 다운받아주세요.")
 
 # 빈 CSV 파일 양식 생성
