@@ -4,7 +4,7 @@ import datetime
 
 # 제목
 st.title("📆학사일정 내 캘린더로 불러오기")
-st.info("CSV 파일을 iCalendar(ICS) 파일로 변환하고, Google Calendar에 추가할 수 있습니다.")
+st.info("CSV 파일을 iCalendar(ICS) 파일로 변환하고, Google Calendar에 추가할 수 있습니다. 먼저 학사일정 데이터는 [나이스 데이터 포털](https://open.neis.go.kr/portal/data/service/selectServicePage.do?page=1&rows=10&sortColumn=&sortDirection=&infId=OPEN17220190722175038389180&infSeq=1)에서 다운받아주세요.")
 
 # 빈 CSV 파일 양식 생성
 def create_sample_csv():
@@ -51,7 +51,6 @@ def convert_to_ics(dataframe):
 # 파일 업로드
 st.subheader("📤 CSV 파일 업로드")
 uploaded_file = st.file_uploader("CSV 파일을 업로드하세요", type=["csv"])
-st.success("학사일정 데이터는 [나이스 데이터 포털](https://open.neis.go.kr/portal/data/service/selectServicePage.do?page=1&rows=10&sortColumn=&sortDirection=&infId=OPEN17220190722175038389180&infSeq=1)에서 다운받을 수 있습니다. ")
 
 if uploaded_file:
     try:
